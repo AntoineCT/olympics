@@ -9,4 +9,6 @@ dependencies = [
   'pytest',
   'rich',
   'fastapi[standard]',
+  'pytest-cov',
 ]
+
