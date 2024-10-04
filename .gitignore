@@ -3,3 +3,5 @@
 .pytest_cache
 venv
 database/*
+olympics/__pycache__
+tests/__pycache__
