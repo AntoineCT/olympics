@@ -280,3 +280,5 @@ Si vous avez des réponses à écrire, des remarques à faire sur votre travail,
 ajoutez-les à la fin de ce fichier.
 
 2. Pour la question 2, en plus de la configuration de tool.coverage.run pour couvrir uniquement les fichiers olympics et tests, j'ai ajouté la configuration "[tool.pytest.ini_options] addopts = "-v --cov"" afin que le --cov et -v soit mis d'office en faisant la commande "python -m pytest".
+
+3. Pour afficher le détails des lignes qui ne sont pas couverte dans le terminal, j'ai ajouté "--cov-report term-missing" dans le addopts du fichier pyproject.toml.
