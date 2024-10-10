@@ -287,4 +287,4 @@ ajoutez-les à la fin de ce fichier.
 
 8. le commentaire pragma: no cover sert afin que pytest oublie la ligne ou il est écrie.
 
-9. Non ce n'est pas suffisant pour que l'ensemble du code fonctionne parfaitement
+9. Non ce n'est pas suffisant pour que l'ensemble du code fonctionne parfaitement, idéalement nous devrions ajouter d'autres type de test que les tests unitaires comme les tests d'intégration afin de vérifier que différents composants du code intéragissent bien entre eux et ceux sans problème ou encore des tests d'acceptation afin de vérifier que le code est conforme aux attentes du client.
