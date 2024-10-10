@@ -15,6 +15,7 @@ jobs:
             python-version: "3.9"
           - os: windows-latest
             python-version: "3.9"
+          - os: ubuntu-latest
 
     
     steps:
