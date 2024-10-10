@@ -22,7 +22,7 @@ parser.add_argument(
 
 def main(argv=None):
     args = parser.parse_args(argv)
-    if (top := int(args.top)) <= 0:
+    if (top := int(args.top)) <= 0: # pragma: no cover
         raise argparse.ArgumentTypeError(f'{top} is not a positive number')
     match args.command:
         case 'countries':
@@ -31,6 +31,8 @@ def main(argv=None):
             cli.top_collective(top)
         case 'individual':
             cli.top_individual(top)
+        case _:  # pragma: no cover
+            ...
 
 
 if __name__ == '__main__':  # pragma: no cover

@@ -282,3 +282,9 @@ ajoutez-les à la fin de ce fichier.
 2. Pour la question 2, en plus de la configuration de tool.coverage.run pour couvrir uniquement les fichiers olympics et tests, j'ai ajouté la configuration "[tool.pytest.ini_options] addopts = "-v --cov"" afin que le --cov et -v soit mis d'office en faisant la commande "python -m pytest".
 
 3. Pour afficher le détails des lignes qui ne sont pas couverte dans le terminal, j'ai ajouté "--cov-report term-missing" dans le addopts du fichier pyproject.toml.
+
+7. le paramètre file permet de rediriger la sortie vers un fichier plutôt que de l'afficher dans le terminal, dans notre cas il permet de s'assurer que la sortie des fonctions sera bien affiché dans le terminal.
+
+8. le commentaire pragma: no cover sert afin que pytest oublie la ligne ou il est écrie.
+
+9. Non ce n'est pas suffisant pour que l'ensemble du code fonctionne parfaitement
