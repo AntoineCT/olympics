@@ -288,3 +288,5 @@ ajoutez-les à la fin de ce fichier.
 8. le commentaire pragma: no cover sert afin que pytest oublie la ligne ou il est écrie.
 
 9. Non ce n'est pas suffisant pour que l'ensemble du code fonctionne parfaitement, idéalement nous devrions ajouter d'autres type de test que les tests unitaires comme les tests d'intégration afin de vérifier que différents composants du code intéragissent bien entre eux et ceux sans problème ou encore des tests d'acceptation afin de vérifier que le code est conforme aux attentes du client.
+
+10. Vous nous avez demandé d'écrire les tests dans cet ordre la afin de suivre un fil logique qui est de d'abord tester "le plus important". En effet si notre base de données (db.py) venaient à ne pas fonctionner correctement, dans ce cas api.py risquerais de ne pas fonctionner correctement non plus et ceux même si sont codes et ses tests sont correctes, c'est pour quoi il faut d'abord tester la base de données, puis l'api, cli.py et enfin main. Regrouper une correction de bug et un test de non-régression dans un commit commun permet une meilleure organisation sur github en particulier quand on travaille en équipe.
