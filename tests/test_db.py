@@ -50,9 +50,25 @@ def test_medals_id():
     assert len(rows) == 1
 
 def test_discipline_athletes():
-    rows = db.get_discipline_athletes()
+    rows = db.get_discipline_athletes(45)
     assert len(rows) > 8
 
-def test_discipline_athletes_id():
-    rows = db.get_discipline_athletes(5)
-    assert len(rows) == 1
+def test_collective_medals():
+    rows = db.get_collective_medals(13)
+    assert len(rows) > 10
+
+def test_top_collective():
+    rows = db.get_top_collective(5)
+    assert len(rows) > 3
+
+def test_individual_medals():
+    rows = db.get_individual_medals()
+    assert len(rows) > 14
+
+def test_individual_medals_id():
+    rows = db.get_individual_medals(4857)
+    assert len(rows) > 3
+
+def test_top_individual_():
+    rows = db.get_top_individual()
+    assert len(rows) > 5
